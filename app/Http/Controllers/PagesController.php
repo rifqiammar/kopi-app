@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    //
-
     public function home()
     {
         return view('index');
@@ -19,3 +17,5 @@ class PagesController extends Controller
         return view('about', ['nama' => $nama]);
     }
 }
+
+// Biasanya Pages Cotroller di gunakan untuk membuat halaman statis saja
