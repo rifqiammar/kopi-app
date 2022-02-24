@@ -37,6 +37,7 @@
                         >
                         <a class="nav-link" href="{{ url('/about') }}">About</a>
                         <a class="nav-link" href="{{ url('/kopi') }}">Kopi</a>
+                        <a class="nav-link" href="{{ url('/products') }}">Products</a>
                     </div>
                 </div>
             </div>

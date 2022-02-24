@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Models\Produk;
+// use Illuminate\Support\Facades\DB;
 
 class KopiController extends Controller
 {
@@ -14,9 +15,11 @@ class KopiController extends Controller
      */
     public function index() 
     {
-        $kopi = DB::table('produk')->get();
- 
-        return view('kopi/index', ['kopi' => $kopi] );
+        // $kopi = DB::table('products')->get(); // ini pakai query builder
+
+        $kopi = Produk::all();
+        
+        return view('kopi/index', ['kopi' => $kopi] ); // Menggunakan Class model eloquent orm
     }
 
     /**
